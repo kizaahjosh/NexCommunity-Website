@@ -1,0 +1,209 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f5f1; /* Light beige background */
+}
+
+/* Sidebar styles */
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: #c45f07; /* Bright orange */
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between menu items and profile link */
+}
+
+/* Sidebar title */
+.sidebar-title {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+/* Main sidebar menu styles */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main menu items */
+.sidebar-menu.main-menu li {
+    margin-bottom: 15px;
+}
+
+/* Link styles for main menu items */
+.sidebar-menu.main-menu li a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    font-size: 18px;
+    display: flex;
+    align-items: center; /* Align icon and text */
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Icon style */
+.sidebar-menu.main-menu li a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 20px; /* Icon size */
+}
+
+/* Hover effect on main menu items */
+.sidebar-menu.main-menu li a:hover {
+    background-color: #6c2b00; /* Darker orange on hover */
+    border-radius: 8px;
+    transform: scale(1.05); /* Slight scale effect */
+}
+.sidebar-menu.profile-link li a {
+    background-color: #6c2b00;
+    text-decoration: none;
+    color: #fff; /* White text */
+    border-radius: 8px;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect on main menu items */
+.sidebar-menu.main-menu li a:hover {
+    background-color: #6c2b00; /* Darker orange on hover */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Profile link positioning at the bottom */
+.sidebar-menu.profile-link {
+    margin-top: auto; /* Push the profile link to the bottom */
+}
+
+/* Profile link icon */
+.profile-link i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 20px; /* Size of the human icon */
+}
+/* Optional: Hover effect on Profile */
+.profile-link a:hover {
+    background-color: #6c2b00; /* Darker orange on hover */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Content container */
+.content-container {
+    margin-left: 250px; /* Sidebar width */
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c45f07; /* Orange navbar */
+    border-radius: 8px;
+    color: white;
+    padding: 15px 30px;
+}
+
+/* Navbar right side styling */
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Logout link styling */
+.logout-link {
+    background-color: #773001; /* Dark orange for the link button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the logout link */
+.logout-link:hover {
+    background-color: #6c2b00; /* Darker orange on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Optional: Adding a shadow on hover */
+.logout-link:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content styles */
+.main-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+/* Basic form styling */
+.registration-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Remove background-color and box-shadow */
+    border-radius: 8px;
+}
+
+/* Styling form labels */
+.registration-form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Styling form input fields */
+.registration-form input,
+.registration-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Add border to inputs */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Styling for the submit button */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the form group container */
+.form-group {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEx Community</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2 class="sidebar-title">DASHBOARD</h2>
+    
+    <!-- Main Sidebar Menu Items -->
+    <ul class="sidebar-menu main-menu">
+        <li><a class="active1" href="HOME.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a class="active2" href="Tools&Equipment.html"><i class="fas fa-tools"></i> Tools & Equipment</a></li>
+        <li><a class="active4" href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+    </ul>
+
+
+    <!-- Profile Link at the bottom -->
+    <ul class="sidebar-menu profile-link">
+        <li><a class="active3" href="PROFILE.html">
+            <i class="fas fa-user"></i> Profile
+        </a></li>
+    </ul>
+</div>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        <!-- Navbar -->
+        <nav class="navbar">
+    <div class="navbar-left">
+        <h2>NEx Community</h2>
+    </div>
+    <div class="navbar-right">
+    <a class="logout-link" href="logout.php">Logout</a>
+</div>
+</nav>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- NEx Community Information -->
+            <section class="nex-info">
+    <h2 class="pop-up">About NEx Community</h2>
+    <p class="pop-up">The NEx Community (Neighborhood Exchange) is a platform designed to foster resource sharing among neighbors. Our goal is to create a more sustainable and connected community where people can borrow, lend, and exchange tools and equipment to save money and reduce waste.</p>
+    
+    <h3>What We Offer</h3>
+    <p>We offer a variety of tools and equipment that community members can lend or borrow for various purposes, including home improvement, gardening, outdoor activities, and more. With NEx Community, neighbors can easily access tools they may not have all year round and lend their own to others.</p>
+    
+    <h3>How It Works</h3>
+                <p>Using the NEx Community platform is simple:</p>
+    <div class="hover-box-container">
+    <div class="box browse">
+        <h4>Browse</h4>
+        <p class="description">Look through the available tools and equipment listed by your neighbors.</p>
+        <img src="Browse.png" alt="Browse" class="box-image">
+    </div>
+    <div class="box request">
+        <h4>Request</h4>
+        <p class="description">Send a request to borrow or exchange a specific item for a certain period.</p>
+        <img src="Request.png" alt="Request" class="box-image">
+    </div>
+    <div class="box connect">
+        <h4>Connect</h4>
+        <p class="description">Communicate with the item owner to arrange pickup, delivery, and any terms for the exchange.</p>
+        <img src="Connect.png" alt="Connect" class="box-image">
+    </div>
+    <div class="box return">
+        <h4>Return</h4>
+        <p class="description">Once you’re done with the tool or equipment, return it and contribute to the community’s growth.</p>
+        <img src="Return.png" alt="Return" class="box-image">
+    </div>
+</div>
+<p class="pop-up">Start exploring the available tools below and become part of the NEx Community today!</p>
+</div>
+</section>
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="footer-content">
+                        <div class="footer-left">
+                            <h3>NEx Community</h3>
+                            <p>Connecting neighbors, sharing tools, building sustainable communities.</p>
+                        </div>
+                        <div class="footer-center">
+                            <h4>Contact Us</h4>
+                            <p>Email: <a href="mailto:info@nexcommunity.com">info@nexcommunity.com</a></p>
+                            <p>Phone: +1 (555) 123-4567</p>
+                            <p>Address: 123 Community Lane, Cityville, State, 12345</p>
+                        </div>
+                        <div class="footer-right">
+                            <h4>Follow Us</h4>
+                            <ul class="social-links">
+                                <li><a href="https://facebook.com/nexcommunity" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://twitter.com/nexcommunity" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                                <li><a href="https://instagram.com/nexcommunity" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                                <li><a href="https://linkedin.com/company/nexcommunity" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </div>
+    <script>
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+// Function to add the 'visible' class to elements that are in the viewport
+function revealOnScroll() {
+    const elements = document.querySelectorAll('.pop-up');
+    elements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Listen for the scroll event and reveal elements as needed
+window.addEventListener('scroll', revealOnScroll);
+
+// Call the function once on load in case some elements are already in the viewport
+window.addEventListener('load', revealOnScroll);
+
+/// Get all boxes
+const boxes = document.querySelectorAll('.box');
+
+// Add a click event listener to each box
+boxes.forEach(box => {
+    box.addEventListener('click', function() {
+        const description = box.querySelector('.description');
+
+        // Toggle the description visibility
+        if (description.style.maxHeight) {
+            description.style.maxHeight = null;
+            description.style.opacity = '0';  // Hide the description
+        } else {
+            description.style.maxHeight = description.scrollHeight + 'px';  // Show the description
+            description.style.opacity = '1';
+        }
+    });
+});
+</script>
+</body>
+</html>

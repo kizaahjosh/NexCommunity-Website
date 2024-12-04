@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEx Community</title>
+    <link rel="stylesheet" href="profstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2 class="sidebar-title">DASHBOARD</h2>
+    
+    <!-- Main Sidebar Menu Items -->
+    <ul class="sidebar-menu main-menu">
+        <li><a class="active1" href="HOME.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a class="active2" href="Tools&Equipment.html"><i class="fas fa-tools"></i> Tools & Equipment</a></li>
+        <li><a class="active4" href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+    </ul>
+    <!-- Profile Link at the bottom -->
+    <ul class="sidebar-menu profile-link">
+        <li><a class="active3" href="PROFILE.html">
+            <i class="fas fa-user"></i> Profile
+        </a></li>
+    </ul>
+</div>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        <!-- Navbar -->
+        <nav class="navbar">
+    <div class="navbar-left">
+        <h2>NEx Community</h2>
+    </div>
+    <div class="navbar-right">
+    <a class="logout-link" href="logout.php">Logout</a>
+</div>
+</nav>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <h2>Update Your Personal Information</h2>
+            <form action="submit_form.php" method="POST" class="registration-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="text" id="contactNumber" name="contactNumber" required placeholder="Enter your contact number">
+                </div>
+                <div class="form-group">
+                    <label for="address">Gmail</label>
+                    <input type="text" id="Email" name="Email" required placeholder="Enter your Gmail">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Exact Address</label>
+                    <input type="text" id="address" name="address" required placeholder="Enter your exact address">
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">Interest to Exchange</label>
+                    <textarea id="interest" name="interest" rows="4" placeholder="Describe your interest to exchange items" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
